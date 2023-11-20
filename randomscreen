@@ -1,0 +1,33 @@
+-- ScreenGui
+local gui = Instance.new("ScreenGui")
+gui.Name = "MyGUI"
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Frame
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(1, 0, 1, 0)
+frame.Position = UDim2.new(0, 0, 0, 0)
+frame.BackgroundColor3 = Color3.new(0, 0, 0)
+frame.Parent = gui
+
+-- TextLabel
+local label = Instance.new("TextLabel")
+label.Size = UDim2.new(1, 0, 0, 30)
+label.BackgroundColor3 = Color3.new(0.5, 0.5, 0.5)
+label.Text = "wowow farming"
+label.FontSize = Enum.FontSize.Size18
+label.Parent = frame
+
+-- Create a TextButton
+local button = Instance.new("TextButton")
+button.Size = UDim2.new(0, 100, 0, 50)
+button.Position = UDim2.new(0.5, -50, 0.5, 20)
+button.BackgroundColor3 = Color3.new(0, 0.5, 1)
+button.Text = "kelix"
+button.FontSize = Enum.FontSize.Size24
+button.Parent = frame
+
+-- Add a function to the button's MouseButton1Click event
+button.MouseButton1Click:Connect(function()
+    print("abcd")
+end)
